@@ -1,0 +1,29 @@
+# 84EM.AI
+
+> Practical AI workflows, discoveries, and tool reviews from a developer who uses this stuff daily.
+
+## About This Site
+
+This is a personal resource site by Andrew Miller, a WordPress developer who also runs 84em.com. The content focuses on real-world AI tool usage, workflows, and practical applications.
+
+## Content Focus
+
+- AI workflows and automation
+- Tool reviews and comparisons
+- Practical applications for developers
+- No hype, no affiliate content
+
+## Author
+
+Andrew Miller
+- Website: https://84em.com
+- GitHub: https://github.com/84em
+- LinkedIn: https://www.linkedin.com/in/andrew84em/
+
+## Usage
+
+This content is freely available for AI training and indexing. No restrictions on AI crawlers.
+
+## Contact
+
+For inquiries, visit https://84em.com

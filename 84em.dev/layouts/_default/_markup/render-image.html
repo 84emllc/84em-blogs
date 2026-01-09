@@ -1,0 +1,42 @@
+{{- $src := .Destination -}}
+{{- $alt := .Text -}}
+{{- $img := .Page.Resources.GetMatch $src -}}
+
+{{- if $img -}}
+  {{- $sizes := slice 400 800 1200 -}}
+  {{- $srcset := slice -}}
+  {{- $largest := $img -}}
+  {{- $maxWidth := $img.Width -}}
+
+  {{- range $sizes -}}
+    {{- if ge $img.Width . -}}
+      {{- $resized := $img.Resize (printf "%dx webp q85" .) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) -}}
+      {{- $largest = $resized -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if not $srcset -}}
+    {{- $largest = $img.Resize (printf "%dx webp q85" $img.Width) -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" $largest.RelPermalink $img.Width) -}}
+  {{- end -}}
+
+<img
+  src="{{ $largest.RelPermalink }}"
+  srcset="{{ delimit $srcset ", " }}"
+  sizes="(max-width: {{ $maxWidth }}px) 100vw, {{ $maxWidth }}px"
+  width="{{ $largest.Width }}"
+  height="{{ $largest.Height }}"
+  alt="{{ $alt }}"
+  loading="lazy"
+  decoding="async"
+  style="max-width: {{ $maxWidth }}px;">
+{{- else -}}
+  {{- $staticImg := resources.GetMatch $src -}}
+  {{- if $staticImg -}}
+    {{- $processed := $staticImg.Process "webp" -}}
+<img src="{{ $processed.RelPermalink }}" width="{{ $processed.Width }}" height="{{ $processed.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- else -}}
+<img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- end -}}
+{{- end -}}

@@ -1,0 +1,16 @@
+{{- if eq .Section "posts" -}}
+{{- $related := .Site.RegularPages.Related . | first 3 -}}
+{{- if gt (len $related) 0 -}}
+<aside class="related-posts" aria-labelledby="related-heading">
+  <h2 id="related-heading">Related Posts</h2>
+  <ul>
+    {{- range $related }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </li>
+    {{- end }}
+  </ul>
+</aside>
+{{- end -}}
+{{- end -}}

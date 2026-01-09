@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+
+<link rel="preload" href="{{ "/fonts/inter.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+
+<link rel="icon" href="{{ "/icon-48.png" | relURL }}" type="image/png" sizes="48x48">
+<link rel="icon" href="{{ "/icon-192.png" | relURL }}" type="image/png" sizes="192x192">
+<link rel="icon" href="{{ "/favicon.ico" | relURL }}" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | relURL }}">
+
+{{- $title := site.Title -}}
+{{- if .IsHome -}}
+  {{- $title = printf "%s - %s" site.Title site.Params.description -}}
+{{- else -}}
+  {{- $title = printf "%s - %s" .Title site.Title -}}
+{{- end -}}
+<title>{{ $title }}</title>
+
+{{- partial "meta.html" . -}}
+
+{{- $css := resources.Get "css/main.css" | minify -}}
+<style>{{ $css.Content | safeCSS }}</style>
+
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ "index.xml" | absURL }}">
+
+{{- partial "structured-data.html" . -}}
+
+{{- if hugo.IsProduction -}}
+<script>
+  if (window.location.search.includes('notrack')) {
+    sessionStorage.setItem('sa_notrack', 'true');
+  }
+  if (sessionStorage.getItem('sa_notrack') !== 'true') {
+    var s1 = document.createElement('script');
+    s1.async = true;
+    s1.src = 'https://scripts.simpleanalyticscdn.com/latest.js';
+    document.head.appendChild(s1);
+    var s2 = document.createElement('script');
+    s2.async = true;
+    s2.src = 'https://scripts.simpleanalyticscdn.com/auto-events.js';
+    document.head.appendChild(s2);
+  }
+</script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade"></noscript>
+{{- end -}}

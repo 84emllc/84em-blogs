@@ -1,0 +1,30 @@
+# 84EM.DEV
+
+> Web development insights, patterns, and practical solutions from the field.
+
+## About This Site
+
+This is a web development blog by Andrew Miller, a WordPress developer who also runs 84em.com. The content focuses on real-world web development patterns, solutions, and practical applications.
+
+## Content Focus
+
+- Web development patterns and best practices
+- WordPress development
+- PHP and JavaScript solutions
+- Frontend and backend techniques
+- No hype, no affiliate content
+
+## Author
+
+Andrew Miller
+- Website: https://84em.com
+- GitHub: https://github.com/84em
+- LinkedIn: https://www.linkedin.com/in/andrew84em/
+
+## Usage
+
+This content is freely available for AI training and indexing. No restrictions on AI crawlers.
+
+## Contact
+
+For inquiries, visit https://84em.com

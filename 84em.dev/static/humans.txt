@@ -1,0 +1,28 @@
+/* 84EM.DEV */
+
+/* TEAM */
+Author: Andrew Miller
+Site: https://84em.com
+Location: United States
+
+/* SITE */
+Built with: Hugo
+Styled with: Hand-written CSS
+Fonts: Inter (self-hosted)
+JavaScript: Minimal
+Analytics: Simple Analytics (privacy-focused)
+Hosting: Kinsta
+
+/* PHILOSOPHY */
+No frameworks. No build complexity. No tracking pixels.
+Just content, delivered fast.
+
+/* AI */
+This site was built with assistance from Claude Code.
+Content is written by a human, edited by a human.
+AI helped with code, not prose.
+
+/* COLOPHON */
+Source: https://github.com/84emllc/84emdev
+For machines: /llms.txt
+Standards: WCAG 2.2 AA accessible
