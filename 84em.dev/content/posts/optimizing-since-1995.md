@@ -41,4 +41,4 @@ The bloated CMS from 1995 taught me that. Every slow site since then has reinfor
 
 ---
 
-*Need help finding what's slowing down your WordPress site? [Get in touch](https://84em.com/contact/).*
+*Need help finding what's slowing down your WordPress site? [Get in touch ↗](https://84em.com/contact/).*

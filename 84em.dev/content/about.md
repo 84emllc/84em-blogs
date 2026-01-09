@@ -19,7 +19,7 @@ I write about problems I've solved for real clients, not theoretical exercises.
 
 ## Related
 
-For AI workflows and tool reviews, see [84EM.AI](https://84em.ai). For consulting and client work, visit [84EM.com](https://84em.com).
+For AI workflows and tool reviews, see [84EM.AI ↗](https://84em.ai). For consulting and client work, visit [84EM.COM ↗](https://84em.com).
 
 ## Connect
 
@@ -29,4 +29,4 @@ For AI workflows and tool reviews, see [84EM.AI](https://84em.ai). For consultin
 
 Static site built with Hugo.
 
-Source available on [GitHub](https://github.com/84emllc/84em-blogs). For machines: [llms.txt](/llms.txt)
+Source available on [GitHub ↗](https://github.com/84emllc/84em-blogs). For machines: [llms.txt](/llms.txt)

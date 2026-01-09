@@ -6,7 +6,7 @@ description: "Using Claude Code with the Sentry MCP to investigate site errors w
 tags: ["claude-code", "mcp", "sentry", "workflow"]
 ---
 
-I use [Sentry](https://sentry.io) to monitor site errors on 84em.com. When something breaks, I get a Slack notification and can dig into the stack trace, affected URLs, and error frequency.
+I use [Sentry ↗](https://sentry.io) to monitor site errors on 84em.com. When something breaks, I get a Slack notification and can dig into the stack trace, affected URLs, and error frequency.
 
 ![Sentry error dashboard](sentry-error-dashboard.png)
 
@@ -14,7 +14,7 @@ This works fine, but it means context switching: leave what I'm doing, open the 
 
 ## A better workflow
 
-I installed the [Sentry MCP](https://github.com/anthropics/claude-code/tree/main/packages/mcp-sentry) in Claude Code. Now when I get an error notification, I can ask Claude to investigate it directly.
+I installed the [Sentry MCP ↗](https://github.com/anthropics/claude-code/tree/main/packages/mcp-sentry) in Claude Code. Now when I get an error notification, I can ask Claude to investigate it directly.
 
 Claude fetches the issue from Sentry, analyzes the stack trace, checks the timeline of occurrences, and produces a full write-up. In this case, it determined that 749 HTTP 500/503 errors were coming from FlyingPress cache preloading during brief server availability issues - not a code bug, just infrastructure noise.
 

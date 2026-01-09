@@ -65,7 +65,7 @@ Pick from your configured contacts. See results immediately.
 
 ## What's next
 
-The [UptimeRobot API](https://uptimerobot.com/api/legacy/#methods) has more to offer. Current implementation covers the core monitor operations:
+The [UptimeRobot API ↗](https://uptimerobot.com/api/legacy/#methods) has more to offer. Current implementation covers the core monitor operations:
 
 - getMonitors, newMonitor, editMonitor, deleteMonitor
 - getAlertContacts (read-only, for attaching to monitors)

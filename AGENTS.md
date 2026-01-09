@@ -129,6 +129,18 @@ When a post spans both domains, publish the primary version on the most relevant
 
 > **Built with AI assistance.** [Read more on my AI blog ↗](https://84em.ai/posts/...)
 
+### External Links
+
+All external links (URLs starting with `http`) must:
+1. Include ↗ arrow at the end of the link text: `[Link Text ↗](https://example.com)`
+2. Open in new tab (handled automatically by `render-link.html` hook)
+
+The render hook at `layouts/_default/_markup/render-link.html` automatically adds `target="_blank" rel="noopener"` to external links. You only need to add the ↗ arrow to the link text.
+
+**Examples:**
+- `[GitHub ↗](https://github.com/84emllc)` - external link
+- `[Privacy Policy](/legal/privacy-policy/)` - internal link (no arrow)
+
 ### Writing Style
 
 Follow the writing style guide at `/home/andrew/Dropbox/Prompts/andrew-miller-writing-style-guide.md`.

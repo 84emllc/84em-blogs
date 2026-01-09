@@ -44,16 +44,16 @@ This site uses the following services to operate:
 
 **Infrastructure**
 
-- **Kinsta (Hosting):** Provides web hosting services. May process server logs for security and performance. [Privacy Policy](https://kinsta.com/legal/privacy-policy/)
-- **Cloudflare (Security/CDN):** Provides security, performance optimization, and content delivery. [Privacy Policy](https://www.cloudflare.com/privacypolicy/)
+- **Kinsta (Hosting):** Provides web hosting services. May process server logs for security and performance. [Privacy Policy ↗](https://kinsta.com/legal/privacy-policy/)
+- **Cloudflare (Security/CDN):** Provides security, performance optimization, and content delivery. [Privacy Policy ↗](https://www.cloudflare.com/privacypolicy/)
 
 **Analytics**
 
-- **Simple Analytics:** Privacy-first analytics service that does not collect IP addresses, use cookies, or track any personally identifiable information. [Privacy Policy](https://simpleanalytics.com/privacy-policy)
+- **Simple Analytics:** Privacy-first analytics service that does not collect IP addresses, use cookies, or track any personally identifiable information. [Privacy Policy ↗](https://simpleanalytics.com/privacy-policy)
 
 **Development**
 
-- **Claude Code:** AI-assisted development tool used to build and maintain this site. Claude Code processes code and development tasks only, not visitor data. [Privacy Policy](https://www.anthropic.com/privacy)
+- **Claude Code:** AI-assisted development tool used to build and maintain this site. Claude Code processes code and development tasks only, not visitor data. [Privacy Policy ↗](https://www.anthropic.com/privacy)
 
 ## Cookies
 

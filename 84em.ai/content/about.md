@@ -19,7 +19,7 @@ I write about what I use, not what's trending.
 
 ## Related
 
-For WordPress and web development, see [84EM.DEV](https://84em.dev). For consulting and client work, visit [84EM.com](https://84em.com).
+For WordPress and web development, see [84EM.DEV ↗](https://84em.dev). For consulting and client work, visit [84EM.COM ↗](https://84em.com).
 
 ## Connect
 
@@ -29,4 +29,4 @@ For WordPress and web development, see [84EM.DEV](https://84em.dev). For consult
 
 Static site built with Hugo.
 
-Source available on [GitHub](https://github.com/84emllc/84em-blogs). For machines: [llms.txt](/llms.txt)
+Source available on [GitHub ↗](https://github.com/84emllc/84em-blogs). For machines: [llms.txt](/llms.txt)

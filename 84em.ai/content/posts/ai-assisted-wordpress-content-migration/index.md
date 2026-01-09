@@ -5,7 +5,7 @@ description: "How Claude Code handled a WordPress content update from database a
 tags: ["ai", "wordpress", "automation", "claude-code"]
 ---
 
-[84EM.COM](https://84em.com) had "13 years of experience" and "30 years of programming" hardcoded across 60+ pages. Every January, I'd need to find and update these references. The task seemed straightforward until you start counting the variations: hero blocks, template files, generated local SEO pages, FAQ sections.
+[84EM.COM ↗](https://84em.com) had "13 years of experience" and "30 years of programming" hardcoded across 60+ pages. Every January, I'd need to find and update these references. The task seemed straightforward until you start counting the variations: hero blocks, template files, generated local SEO pages, FAQ sections.
 
 Rather than manually hunting through the WordPress admin, I handed the problem to Claude Code.
 
