@@ -183,7 +183,7 @@ Site uses [Simple Analytics](https://simpleanalytics.com) for privacy-friendly t
 
 ## Git Repository
 
-- **Remote:** https://github.com/84emllc/84emai
+- **Remote:** https://github.com/84emllc/84em-blogs
 - **Branch:** main
 - **Ignored:** `/public/`, `/resources/_gen/`, editor files
 

@@ -29,4 +29,4 @@ For AI workflows and tool reviews, see [84EM.AI](https://84em.ai). For consultin
 
 Static site built with Hugo.
 
-Source available on [GitHub](https://github.com/84emllc/84emdev). For machines: [llms.txt](/llms.txt)
+Source available on [GitHub](https://github.com/84emllc/84em-blogs). For machines: [llms.txt](/llms.txt)

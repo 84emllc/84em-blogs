@@ -29,4 +29,4 @@ For WordPress and web development, see [84EM.DEV](https://84em.dev). For consult
 
 Static site built with Hugo.
 
-Source available on [GitHub](https://github.com/84emllc/84emai). For machines: [llms.txt](/llms.txt)
+Source available on [GitHub](https://github.com/84emllc/84em-blogs). For machines: [llms.txt](/llms.txt)
