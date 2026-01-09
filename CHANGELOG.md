@@ -5,14 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2026-01-09
+
+### Removed
+
+- RSS/Sitemap validation workflow (xmllint compatibility issues)
+- HTML validation workflow (validator false positives on modern CSS)
+
 ## [1.1.0] - 2026-01-09
 
 ### Added
 
-- HTML validation workflow (W3C standards compliance)
 - Build verification workflow (ensures Hugo builds with expected outputs)
 - External link check workflow (weekly, creates issues for broken links)
-- RSS/Sitemap validation workflow (validates XML feeds)
 - Scheduled Lighthouse workflow (weekly performance monitoring with alerts)
 
 ### Changed
