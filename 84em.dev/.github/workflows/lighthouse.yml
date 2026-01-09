@@ -1,0 +1,123 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'layouts/**'
+      - 'assets/**'
+      - 'static/**'
+      - 'hugo.toml'
+      - 'archetypes/**'
+      - '.github/workflows/lighthouse.yml'
+      - 'lighthouserc.json'
+  pull_request:
+    types: [labeled]
+    branches: [main]
+
+jobs:
+  lighthouse:
+    if: github.event_name == 'push' || contains(github.event.pull_request.labels.*.name, 'run-ci')
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set URLs
+        id: urls
+        run: |
+          if [ "${{ github.event_name }}" == "push" ]; then
+            echo "base_url=https://84em.dev" >> $GITHUB_OUTPUT
+          else
+            BRANCH_SLUG=$(echo "${{ github.head_ref }}" | sed 's/\//-/g')
+            echo "base_url=https://emdev-branch-${BRANCH_SLUG}.kinsta.page" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Wait for deployment
+        id: wait
+        run: |
+          URL="${{ steps.urls.outputs.base_url }}/"
+          echo "Waiting for $URL to become available..."
+          for i in {1..12}; do
+            if curl -sf --max-time 10 "$URL" > /dev/null 2>&1; then
+              echo "Site is ready!"
+              echo "ready=true" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+            echo "Attempt $i/12 - not ready, waiting 15s..."
+            sleep 15
+          done
+          echo "Site not available after 3 minutes"
+          echo "ready=false" >> $GITHUB_OUTPUT
+
+      - name: Lighthouse CI
+        if: steps.wait.outputs.ready == 'true'
+        id: lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            ${{ steps.urls.outputs.base_url }}/
+            ${{ steps.urls.outputs.base_url }}/about/
+            ${{ steps.urls.outputs.base_url }}/posts/
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          configPath: ./lighthouserc.json
+
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && steps.wait.outputs.ready == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const results = ${{ steps.lighthouse.outputs.manifest }};
+            const links = ${{ steps.lighthouse.outputs.links }};
+
+            // Group results by URL and calculate median
+            const byUrl = {};
+            for (const result of results) {
+              const url = new URL(result.url).pathname || '/';
+              if (!byUrl[url]) byUrl[url] = [];
+              byUrl[url].push(result.summary);
+            }
+
+            const median = arr => {
+              const sorted = [...arr].sort((a, b) => a - b);
+              const mid = Math.floor(sorted.length / 2);
+              return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+            };
+
+            let comment = '## Lighthouse Results\n\n';
+            comment += 'Tested against: `${{ steps.urls.outputs.base_url }}`\n\n';
+            comment += '| Page | Performance | Accessibility | Best Practices | SEO |\n';
+            comment += '|------|-------------|---------------|----------------|-----|\n';
+
+            for (const [url, runs] of Object.entries(byUrl)) {
+              const perf = Math.round(median(runs.map(r => r.performance)) * 100);
+              const a11y = Math.round(median(runs.map(r => r.accessibility)) * 100);
+              const bp = Math.round(median(runs.map(r => r['best-practices'])) * 100);
+              const seo = Math.round(median(runs.map(r => r.seo)) * 100);
+              comment += `| ${url} | ${perf} | ${a11y} | ${bp} | ${seo} |\n`;
+            }
+
+            const reportLinks = Object.values(links).slice(0, 3);
+            comment += '\n[View reports](' + reportLinks.join(') | [Report](') + ')';
+
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: comment
+            });
+
+      - name: Comment on PR (skipped)
+        if: github.event_name == 'pull_request' && steps.wait.outputs.ready != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '## Lighthouse Results\n\nSkipped - preview deployment at `${{ steps.urls.outputs.base_url }}` was not available after 3 minutes.'
+            });

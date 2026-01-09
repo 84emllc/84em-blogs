@@ -1,0 +1,61 @@
+{{- if .IsHome -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.Title }}",
+  "url": "{{ site.BaseURL }}",
+  "description": "{{ site.Params.description }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.Params.author }}"
+  }
+}
+</script>
+{{- $posts := where site.RegularPages "Section" "posts" -}}
+{{- if $posts -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Latest Posts",
+  "itemListElement": [
+    {{- range $index, $post := first 10 $posts -}}
+    {{- if $index }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add $index 1 }},
+      "url": "{{ $post.Permalink }}",
+      "name": "{{ $post.Title }}"
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end -}}
+{{- else if .IsPage -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "url": "{{ .Permalink }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  {{- if .Lastmod }}
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  {{- end }}
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.Params.author }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ site.Params.author }}"
+  },
+  "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}"
+  {{- with .Params.tags }},
+  "keywords": "{{ delimit . ", " }}"
+  {{- end }}
+}
+</script>
+{{- end -}}

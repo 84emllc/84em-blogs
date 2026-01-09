@@ -1,0 +1,27 @@
+{{- if not .IsHome -}}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="{{ "/" | relURL }}"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1">
+    </li>
+    {{- if .IsPage -}}
+    {{- with .Section -}}
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="{{ "/" | relURL }}{{ . }}/"><span itemprop="name">{{ . | title }}</span></a>
+      <meta itemprop="position" content="2">
+    </li>
+    {{- end -}}
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+      <span itemprop="name">{{ .Title }}</span>
+      <meta itemprop="position" content="{{ if .Section }}3{{ else }}2{{ end }}">
+    </li>
+    {{- else if .IsSection -}}
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+      <span itemprop="name">{{ .Title }}</span>
+      <meta itemprop="position" content="2">
+    </li>
+    {{- end -}}
+  </ol>
+</nav>
+{{- end -}}

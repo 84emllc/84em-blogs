@@ -1,0 +1,12 @@
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="{{ "/" | relURL }}" class="site-logo" aria-label="{{ site.Title }} home">
+      <img src="{{ "/images/logo.webp" | relURL }}" alt="" width="47" height="40">
+      <span class="site-name">84EM.DEV</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="{{ "/posts/" | relURL }}"{{ if eq .Section "posts" }} aria-current="page"{{ end }}>Posts</a></li>
+      <li><a href="{{ "/about/" | relURL }}"{{ if eq .Title "About" }} aria-current="page"{{ end }}>About</a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+<article class="single-post">
+  <header class="post-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Date.IsZero | not }}
+    {{- if eq .Section "posts" }}
+    <div class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{- $readTime := div .WordCount 100 }}{{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
+      <span class="reading-time">{{ $readTime }} min read</span>
+      {{- with .Params.tags }}
+      <span class="post-tags">
+        {{- range . }}
+        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" rel="tag">{{ . }}</a>
+        {{- end }}
+      </span>
+      {{- end }}
+    </div>
+    {{- end }}
+    {{- end }}
+  </header>
+
+  {{- if and (gt (len .TableOfContents) 100) (ne .Params.toc false) }}
+  <details class="toc">
+    <summary>Table of Contents</summary>
+    {{ .TableOfContents }}
+  </details>
+  {{- end }}
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{ partial "share.html" . }}
+
+  {{ partial "related.html" . }}
+
+  {{- if eq .Section "posts" }}
+  <footer class="post-footer">
+    {{- $prev := .PrevInSection -}}
+    {{- $next := .NextInSection -}}
+    {{- if or $prev $next -}}
+    <nav class="post-nav" aria-label="Post navigation">
+      {{- with $prev }}
+      <a href="{{ .RelPermalink }}" class="prev">&larr; {{ .Title }}</a>
+      {{- end }}
+      {{- with $next }}
+      <a href="{{ .RelPermalink }}" class="next">{{ .Title }} &rarr;</a>
+      {{- end }}
+    </nav>
+    {{- end -}}
+  </footer>
+  {{- end }}
+</article>
+{{ end }}

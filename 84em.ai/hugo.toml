@@ -1,0 +1,70 @@
+baseURL = 'https://84em.ai/'
+languageCode = 'en-us'
+title = '84EM.AI'
+copyright = 'Andrew Miller'
+enableRobotsTXT = true
+summaryLength = 70
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  author = "Andrew Miller"
+  description = "Practical AI workflows, discoveries, and tool reviews from a developer who uses this stuff daily."
+  keywords = ["AI", "workflows", "tools", "development", "automation"]
+  mainSections = ["posts"]
+
+[params.social]
+  twitter = "84emcom"
+
+[permalinks]
+  posts = "/posts/:slug/"
+
+[taxonomies]
+  tag = "tags"
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    style = "monokai"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = true
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
