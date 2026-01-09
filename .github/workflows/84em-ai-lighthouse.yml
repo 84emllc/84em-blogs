@@ -1,24 +1,25 @@
-name: Lighthouse CI
+name: "84em.ai: Lighthouse CI"
 
 on:
   push:
     branches: [main]
     paths:
-      - 'content/**'
-      - 'layouts/**'
-      - 'assets/**'
-      - 'static/**'
-      - 'hugo.toml'
-      - 'archetypes/**'
-      - '.github/workflows/lighthouse.yml'
-      - 'lighthouserc.json'
+      - '84em.ai/content/**'
+      - '84em.ai/layouts/**'
+      - '84em.ai/assets/**'
+      - '84em.ai/static/**'
+      - '84em.ai/hugo.toml'
+      - '84em.ai/archetypes/**'
+      - '.github/workflows/84em-ai-lighthouse.yml'
+      - '84em.ai/lighthouserc.json'
   pull_request:
     types: [labeled]
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   lighthouse:
-    if: github.event_name == 'push' || contains(github.event.pull_request.labels.*.name, 'run-ci')
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || contains(github.event.pull_request.labels.*.name, 'run-ci')
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -27,18 +28,23 @@ jobs:
 
       - name: Set URLs
         id: urls
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          HEAD_REF: ${{ github.head_ref }}
         run: |
-          if [ "${{ github.event_name }}" == "push" ]; then
-            echo "base_url=https://84em.dev" >> $GITHUB_OUTPUT
+          if [ "$EVENT_NAME" == "push" ] || [ "$EVENT_NAME" == "workflow_dispatch" ]; then
+            echo "base_url=https://84em.ai" >> $GITHUB_OUTPUT
           else
-            BRANCH_SLUG=$(echo "${{ github.head_ref }}" | sed 's/\//-/g')
-            echo "base_url=https://emdev-branch-${BRANCH_SLUG}.kinsta.page" >> $GITHUB_OUTPUT
+            BRANCH_SLUG=$(echo "$HEAD_REF" | sed 's/\//-/g')
+            echo "base_url=https://emai-yxxth-branch-${BRANCH_SLUG}.kinsta.page" >> $GITHUB_OUTPUT
           fi
 
       - name: Wait for deployment
         id: wait
+        env:
+          BASE_URL: ${{ steps.urls.outputs.base_url }}
         run: |
-          URL="${{ steps.urls.outputs.base_url }}/"
+          URL="${BASE_URL}/"
           echo "Waiting for $URL to become available..."
           for i in {1..12}; do
             if curl -sf --max-time 10 "$URL" > /dev/null 2>&1; then
@@ -63,17 +69,18 @@ jobs:
             ${{ steps.urls.outputs.base_url }}/posts/
           uploadArtifacts: true
           temporaryPublicStorage: true
-          configPath: ./lighthouserc.json
+          configPath: ./84em.ai/lighthouserc.json
 
       - name: Comment on PR
         if: github.event_name == 'pull_request' && steps.wait.outputs.ready == 'true'
         uses: actions/github-script@v7
+        env:
+          BASE_URL: ${{ steps.urls.outputs.base_url }}
         with:
           script: |
             const results = ${{ steps.lighthouse.outputs.manifest }};
             const links = ${{ steps.lighthouse.outputs.links }};
 
-            // Group results by URL and calculate median
             const byUrl = {};
             for (const result of results) {
               const url = new URL(result.url).pathname || '/';
@@ -87,8 +94,8 @@ jobs:
               return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
             };
 
-            let comment = '## Lighthouse Results\n\n';
-            comment += 'Tested against: `${{ steps.urls.outputs.base_url }}`\n\n';
+            let comment = '## Lighthouse Results (84em.ai)\n\n';
+            comment += 'Tested against: `' + process.env.BASE_URL + '`\n\n';
             comment += '| Page | Performance | Accessibility | Best Practices | SEO |\n';
             comment += '|------|-------------|---------------|----------------|-----|\n';
 
@@ -97,7 +104,7 @@ jobs:
               const a11y = Math.round(median(runs.map(r => r.accessibility)) * 100);
               const bp = Math.round(median(runs.map(r => r['best-practices'])) * 100);
               const seo = Math.round(median(runs.map(r => r.seo)) * 100);
-              comment += `| ${url} | ${perf} | ${a11y} | ${bp} | ${seo} |\n`;
+              comment += '| ' + url + ' | ' + perf + ' | ' + a11y + ' | ' + bp + ' | ' + seo + ' |\n';
             }
 
             const reportLinks = Object.values(links).slice(0, 3);
@@ -112,6 +119,8 @@ jobs:
 
       - name: Comment on PR (skipped)
         if: github.event_name == 'pull_request' && steps.wait.outputs.ready != 'true'
+        env:
+          BASE_URL: ${{ steps.urls.outputs.base_url }}
         uses: actions/github-script@v7
         with:
           script: |
@@ -119,5 +128,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: '## Lighthouse Results\n\nSkipped - preview deployment at `${{ steps.urls.outputs.base_url }}` was not available after 3 minutes.'
+              body: '## Lighthouse Results (84em.ai)\n\nSkipped - preview deployment at `' + process.env.BASE_URL + '` was not available after 3 minutes.'
             });

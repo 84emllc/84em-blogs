@@ -1,23 +1,28 @@
-name: Check Links
+name: "84em.ai: Check Links"
 
 on:
   push:
     branches: [main]
     paths:
-      - 'content/**'
-      - 'layouts/**'
-      - 'assets/**'
-      - 'static/**'
-      - 'hugo.toml'
-      - 'archetypes/**'
-      - '.github/workflows/links.yml'
+      - '84em.ai/content/**'
+      - '84em.ai/layouts/**'
+      - '84em.ai/assets/**'
+      - '84em.ai/static/**'
+      - '84em.ai/hugo.toml'
+      - '84em.ai/archetypes/**'
+      - '.github/workflows/84em-ai-links.yml'
   pull_request:
     types: [labeled]
     branches: [main]
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: 84em.ai
 
 jobs:
   check-links:
-    if: github.event_name == 'push' || contains(github.event.pull_request.labels.*.name, 'run-ci')
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || contains(github.event.pull_request.labels.*.name, 'run-ci')
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -42,7 +47,7 @@ jobs:
             --no-progress
             --offline
             --exclude 'fonts.gstatic.com'
-            './public/**/*.html'
+            './84em.ai/public/**/*.html'
           fail: true
 
       - name: Comment on PR
@@ -53,7 +58,7 @@ jobs:
             const fs = require('fs');
             const status = '${{ steps.lychee.outcome }}';
 
-            let comment = '## Link Check Results\n\n';
+            let comment = '## Link Check Results (84em.ai)\n\n';
 
             if (status === 'success') {
               comment += ':white_check_mark: All internal links are valid.\n';
