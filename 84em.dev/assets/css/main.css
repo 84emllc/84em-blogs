@@ -809,17 +809,17 @@ main {
   padding: 0.625rem 1rem;
   border-radius: 6px;
   text-decoration: none;
-  color: var(--color-text-muted);
+  color: var(--color-accent-green);
   background: var(--color-code-bg);
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.post-content .contact-links img {
+.contact-links img {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
   border-radius: 4px;
-  filter: grayscale(1) brightness(0) invert(1);
+  filter: brightness(0) saturate(100%) invert(31%) sepia(97%) saturate(621%) hue-rotate(53deg) brightness(95%) contrast(101%);
   transition: filter 0.15s ease;
 }
 
