@@ -1,0 +1,76 @@
+name: "84em.ai: Build Verification"
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '84em.ai/**'
+      - '.github/workflows/84em-ai-build.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - '84em.ai/**'
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: 84em.ai
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build site
+        run: hugo --minify
+
+      - name: Verify build output
+        run: |
+          echo "Checking required files..."
+
+          # Check index.html exists
+          if [ ! -f "public/index.html" ]; then
+            echo "ERROR: public/index.html not found"
+            exit 1
+          fi
+          echo "OK: public/index.html exists"
+
+          # Check sitemap exists
+          if [ ! -f "public/sitemap.xml" ]; then
+            echo "ERROR: public/sitemap.xml not found"
+            exit 1
+          fi
+          echo "OK: public/sitemap.xml exists"
+
+          # Check RSS feed exists
+          if [ ! -f "public/index.xml" ]; then
+            echo "ERROR: public/index.xml (RSS) not found"
+            exit 1
+          fi
+          echo "OK: public/index.xml exists"
+
+          # Check posts directory exists
+          if [ ! -d "public/posts" ]; then
+            echo "ERROR: public/posts/ directory not found"
+            exit 1
+          fi
+          echo "OK: public/posts/ directory exists"
+
+          # Check for zero-byte HTML files
+          ZERO_FILES=$(find public -name "*.html" -size 0 | head -5)
+          if [ -n "$ZERO_FILES" ]; then
+            echo "ERROR: Zero-byte HTML files found:"
+            echo "$ZERO_FILES"
+            exit 1
+          fi
+          echo "OK: No zero-byte HTML files"
+
+          echo ""
+          echo "Build verification passed!"
