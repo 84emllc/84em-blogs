@@ -809,7 +809,7 @@ main {
   padding: 0.625rem 1rem;
   border-radius: 6px;
   text-decoration: none;
-  color: var(--color-accent-green);
+  color: #9ff400;
   background: var(--color-code-bg);
   transition: background-color 0.15s ease, color 0.15s ease;
 }
@@ -819,7 +819,7 @@ main {
   vertical-align: middle;
   margin: 0;
   border-radius: 4px;
-  filter: brightness(0) saturate(100%) invert(31%) sepia(97%) saturate(621%) hue-rotate(53deg) brightness(95%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(83%) sepia(47%) saturate(1000%) hue-rotate(43deg) brightness(104%);
   transition: filter 0.15s ease;
 }
 
