@@ -240,7 +240,11 @@ main {
 
 .site-footer p {
   max-width: var(--max-width-wide);
-  margin: 0 auto;
+  margin: 0 auto 0.5rem;
+}
+
+.site-footer p:last-of-type {
+  margin-bottom: 0;
 }
 
 .site-footer a {
@@ -253,6 +257,24 @@ main {
 
 .site-footer a:hover {
   color: #fff;
+}
+
+.footer-credits {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+@media (max-width: 600px) {
+  .footer-credits {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-credits .sep {
+    display: none;
+  }
 }
 
 .footer-links {
