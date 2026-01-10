@@ -24,9 +24,3 @@ For AI workflows and tool reviews, see [84EM.AI ↗](https://84em.ai). For consu
 ## Connect
 
 {{< contact-links >}}
-
-## How it's built
-
-Static site built with Hugo.
-
-Source available on [GitHub ↗](https://github.com/84emllc/84em-blogs). For machines: [llms.txt](/llms.txt)
