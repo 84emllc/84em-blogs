@@ -305,6 +305,15 @@ main {
   filter: none;
 }
 
+/* Footer mobile layout */
+@media (max-width: 600px) {
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
 /* Breadcrumbs */
 .breadcrumbs {
   margin-bottom: 1.5rem;
