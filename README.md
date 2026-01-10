@@ -1,5 +1,12 @@
 # 84EM Blogs
 
+## CI Status
+
+| Site | Build | Lighthouse | Links | External Links |
+|------|-------|------------|-------|----------------|
+| 84em.ai | [![Build](https://github.com/84emllc/84em-blogs/actions/workflows/84em-ai-build.yml/badge.svg)](https://github.com/84emllc/84em-blogs/actions/workflows/84em-ai-build.yml) | [![Lighthouse](https://github.com/84emllc/84em-blogs/actions/workflows/84em-ai-lighthouse.yml/badge.svg)](https://github.com/84emllc/84em-blogs/actions/workflows/84em-ai-lighthouse.yml) | [![Links](https://github.com/84emllc/84em-blogs/actions/workflows/84em-ai-links.yml/badge.svg)](https://github.com/84emllc/84em-blogs/actions/workflows/84em-ai-links.yml) | [![External](https://github.com/84emllc/84em-blogs/actions/workflows/84em-ai-external-links.yml/badge.svg)](https://github.com/84emllc/84em-blogs/actions/workflows/84em-ai-external-links.yml) |
+| 84em.dev | [![Build](https://github.com/84emllc/84em-blogs/actions/workflows/84em-dev-build.yml/badge.svg)](https://github.com/84emllc/84em-blogs/actions/workflows/84em-dev-build.yml) | [![Lighthouse](https://github.com/84emllc/84em-blogs/actions/workflows/84em-dev-lighthouse.yml/badge.svg)](https://github.com/84emllc/84em-blogs/actions/workflows/84em-dev-lighthouse.yml) | [![Links](https://github.com/84emllc/84em-blogs/actions/workflows/84em-dev-links.yml/badge.svg)](https://github.com/84emllc/84em-blogs/actions/workflows/84em-dev-links.yml) | [![External](https://github.com/84emllc/84em-blogs/actions/workflows/84em-dev-external-links.yml/badge.svg)](https://github.com/84emllc/84em-blogs/actions/workflows/84em-dev-external-links.yml) |
+
 Monorepo containing two Hugo-based blog sites for 84EM.
 
 | Site | Domain | Focus |
