@@ -19,7 +19,27 @@ I write about problems I've solved for real clients, not theoretical exercises.
 
 ## Development setup
 
-I build with AI assistance: Claude Code for development, supplemented by Codex CLI, Copilot, and Gemini Code Assist for code review and validation.
+**Environment:** Linux (Pop!_OS), PhpStorm, Local by Flywheel, shell scripts for automation.
+
+**Version control:** GitHub, GitKraken, GitHub Actions for CI/CD.
+
+**Hosting:** Kinsta, WP Engine, Linode, Digital Ocean.
+
+**Languages:** PHP, JavaScript.
+
+**CMS:** WordPress, vanilla PHP apps, with occasional work in other PHP frameworks and content management systems.
+
+**Databases:** MySQL, MariaDB, Redis.
+
+**Build tools:** Webpack, Vite, Composer, npm, and other popular bundlers as needed.
+
+**Testing:** PHPUnit, WP-CLI, Playwright, Ghost Inspector.
+
+**Monitoring:** Sentry, Query Monitor, New Relic, Uptime Robot.
+
+**API tools:** Postman.
+
+**AI assistance:** Claude Code for development, supplemented by Codex CLI, Copilot, and Gemini Code Assist for code review and validation.
 
 ## Related
 
