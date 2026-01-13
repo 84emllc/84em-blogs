@@ -29,6 +29,8 @@ I write about problems I've solved for real clients, not theoretical exercises.
 
 **CMS:** WordPress, vanilla PHP apps, with occasional work in other PHP frameworks and content management systems.
 
+**Static sites:** Hugo, vanilla HTML/CSS/JS, with interest in exploring other generators.
+
 **Databases:** MySQL, MariaDB, Redis.
 
 **Build tools:** Webpack, Vite, Composer, npm, and other popular bundlers as needed.

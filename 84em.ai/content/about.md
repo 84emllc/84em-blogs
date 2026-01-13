@@ -23,6 +23,8 @@ I write about what I use, not what's trending.
 
 **For writing and design:** Claude for documentation and specs, Gemini for UI/UX mockups.
 
+**For meetings:** Plaud, Calendly Notetaker, Zoom AI.
+
 For my full development stack, see [84EM.DEV ↗](https://84em.dev/about/).
 
 ## Related
