@@ -23,7 +23,9 @@ I build with AI assistance: Claude Code for development, supplemented by Codex C
 
 ## Related
 
-For AI workflows and tool reviews, see [84EM.AI ↗](https://84em.ai). For consulting and client work, visit [84EM.COM ↗](https://84em.com).
+For AI workflows and tool reviews, see [84EM.AI ↗](https://84em.ai).
+
+For consulting and client work, visit [84EM.COM ↗](https://84em.com).
 
 ## Connect
 

@@ -25,7 +25,9 @@ I write about what I use, not what's trending.
 
 ## Related
 
-For WordPress and web development, see [84EM.DEV ↗](https://84em.dev). For consulting and client work, visit [84EM.COM ↗](https://84em.com).
+For WordPress and web development, see [84EM.DEV ↗](https://84em.dev).
+
+For consulting and client work, visit [84EM.COM ↗](https://84em.com).
 
 ## Connect
 
