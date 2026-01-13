@@ -17,6 +17,12 @@ AI coverage tends toward extremes. I'm more interested in what actually works da
 
 I write about what I use, not what's trending.
 
+## Tools I use
+
+**For development:** Claude Code (primary), with Codex CLI, Copilot, and Gemini Code Assist for validation and review.
+
+**For writing and design:** Claude for documentation and specs, Gemini for UI/UX mockups.
+
 ## Related
 
 For WordPress and web development, see [84EM.DEV ↗](https://84em.dev). For consulting and client work, visit [84EM.COM ↗](https://84em.com).
