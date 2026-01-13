@@ -17,9 +17,15 @@ Practical web development content: backend architecture, frontend patterns, Word
 
 I write about problems I've solved for real clients, not theoretical exercises.
 
+## Development setup
+
+I build with AI assistance: Claude Code for development, supplemented by Codex CLI, Copilot, and Gemini Code Assist for code review and validation.
+
 ## Related
 
-For AI workflows and tool reviews, see [84EM.AI ↗](https://84em.ai). For consulting and client work, visit [84EM.COM ↗](https://84em.com).
+For AI workflows and tool reviews, see [84EM.AI ↗](https://84em.ai).
+
+For consulting and client work, visit [84EM.COM ↗](https://84em.com).
 
 ## Connect
 
