@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.5] - 2026-01-20
+
+### Added
+
+- New blog post on 84em.dev: "The WordPress Plugins I Actually Use"
+
+### Changed
+
+- External links now include `nofollow` in addition to `noopener` (both sites)
+- Updated AGENTS.md external link documentation to reflect nofollow addition
+
 ## [1.2.4] - 2026-01-15
 
 ### Added
