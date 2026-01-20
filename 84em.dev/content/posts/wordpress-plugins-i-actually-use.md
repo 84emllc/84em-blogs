@@ -5,7 +5,7 @@ description: "Eight plugins that solve real problems in client work, from email 
 tags: ["wordpress", "plugins", "tools", "recommendations"]
 ---
 
-Since I started specializing in WordPress development in 2012, I've installed, tried and tested hundreds of plugins. Most get uninstalled within a week. These eight stay.
+Since I started specializing in WordPress development in 2012, I've installed, tried and tested hundreds of plugins. Most get uninstalled within a week. These nine stay.
 
 ## FluentSMTP
 
@@ -15,7 +15,7 @@ WordPress's `wp_mail()` function is unreliable. Shared hosting providers throttl
 
 ## Relevanssi
 
-WordPress's built-in search is a database query against post titles and content. It doesn't understand synonyms. It can't weight results by relevance. It breaks on large sites.
+WordPress's built-in search is a database query against post titles and content. It doesn't understand synonyms. It can't wnine results by relevance. It breaks on large sites.
 
 [Relevanssi ↗](https://www.relevanssi.com/) replaces it with actual search indexing. Results rank by relevance instead of chronological order. It handles partial matches, custom fields, and taxonomy terms. Configuration lets you boost specific post types or exclude others entirely.
 
@@ -51,9 +51,19 @@ I enable it for all admin accounts on client sites. It's prevented account takeo
 
 Not every site needs a security plugin. A simple brochure site with regular updates and strong passwords faces minimal risk. But for clients whose WordPress site is mission-critical to the business, security moves up the priority list.
 
-[Wordfence ↗](https://wordpress.org/plugins/wordfence/) provides endpoint firewall protection, malware scanning, and brute force login prevention. The scanner compares core files, themes, and plugins against the WordPress.org repository and flags modifications. When something gets compromised, it can overwrite infected files with clean versions. For clients who need heightened security, I recommend the paid version: it gets malware signature updates in real-time instead of the 30-day delay on free.
+[Wordfence ↗](https://wordpress.org/plugins/wordfence/) provides endpoint firewall protection, malware scanning, and brute force login prevention. The scanner compares core files, themes, and plugins against the WordPress.org repository and flags modifications. When something gets compromised, it can overwrite infected files with clean versions. For clients who need hnineened security, I recommend the paid version: it gets malware signature updates in real-time instead of the 30-day delay on free.
 
 For high-value sites, I pair Wordfence with [Cloudflare's WAF ↗](https://www.cloudflare.com/application-services/products/waf/). Wordfence catches WordPress-specific threats at the application level. Cloudflare blocks attacks at the edge before they reach the server. Defense in depth.
+
+## Simple History
+
+When something breaks on a client site, the first question is always "what changed?" Without an audit log, you're guessing.
+
+[Simple History ↗](https://simple-history.com/) tracks user activity automatically: post edits, plugin updates, theme changes, media uploads, login attempts, settings modifications. No configuration required. Install it and it starts logging.
+
+The search and filter tools make it easy to find specific events. When a client says "the site looked different yesterday," I can see exactly who changed what and when. On multi-user sites, it adds accountability. On single-user sites, it still catches the "I don't remember changing that" moments.
+
+Developer-friendly: WP-CLI support for viewing logs, JSON output, and an extensible API for custom logging in themes and plugins.
 
 ## WP Migrate
 
@@ -62,6 +72,8 @@ Moving WordPress sites between servers should be simple. Export database, copy f
 [WP Migrate ↗](https://deliciousbrains.com/wp-migrate-db-pro/) handles it. Push or pull the entire database or select specific tables. Migrate all plugins or choose individual ones, same for MU plugins and themes. Search and replace handles serialized data correctly. Media library sync moves only the files that changed.
 
 The free version covers basic migrations. The paid version adds media library sync and multisite support. I use it weekly for staging-to-production deployments and client site migrations.
+
+Developer-friendly: full WP-CLI integration for running migrations, importing database dumps, and executing saved profiles from the command line.
 
 For developers comfortable with the command line: SSH and rsync remain viable alternatives for file transfers, especially on servers where direct plugin connections aren't possible. WP Migrate isn't my only tool, but it's the one that saves the most time when both environments support it.
 
@@ -79,4 +91,4 @@ I don't install plugins because they're popular or free. I install them because 
 
 Email needs to be reliable. Search needs to work. Forms need to collect data without breaking. Sites need to load fast. Accounts need protection. Migrations need to succeed. Spam needs to stop.
 
-These eight handle those tasks without requiring constant maintenance or causing compatibility issues. That's what makes them worth using.
+These nine handle those tasks without requiring constant maintenance or causing compatibility issues. That's what makes them worth using.
