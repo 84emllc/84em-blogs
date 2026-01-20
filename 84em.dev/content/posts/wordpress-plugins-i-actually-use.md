@@ -15,7 +15,7 @@ WordPress's `wp_mail()` function is unreliable. Shared hosting providers throttl
 
 ## Relevanssi
 
-WordPress's built-in search is a database query against post titles and content. It doesn't understand synonyms. It can't wnine results by relevance. It breaks on large sites.
+WordPress's built-in search is a database query against post titles and content. It doesn't understand synonyms. It can't weight results by relevance. It breaks on large sites.
 
 [Relevanssi ↗](https://www.relevanssi.com/) replaces it with actual search indexing. Results rank by relevance instead of chronological order. It handles partial matches, custom fields, and taxonomy terms. Configuration lets you boost specific post types or exclude others entirely.
 
@@ -51,7 +51,7 @@ I enable it for all admin accounts on client sites. It's prevented account takeo
 
 Not every site needs a security plugin. A simple brochure site with regular updates and strong passwords faces minimal risk. But for clients whose WordPress site is mission-critical to the business, security moves up the priority list.
 
-[Wordfence ↗](https://wordpress.org/plugins/wordfence/) provides endpoint firewall protection, malware scanning, and brute force login prevention. The scanner compares core files, themes, and plugins against the WordPress.org repository and flags modifications. When something gets compromised, it can overwrite infected files with clean versions. For clients who need hnineened security, I recommend the paid version: it gets malware signature updates in real-time instead of the 30-day delay on free.
+[Wordfence ↗](https://wordpress.org/plugins/wordfence/) provides endpoint firewall protection, malware scanning, and brute force login prevention. The scanner compares core files, themes, and plugins against the WordPress.org repository and flags modifications. When something gets compromised, it can overwrite infected files with clean versions. For clients who need extra security, I recommend the paid version: it gets malware signature updates in real-time instead of the 30-day delay on free.
 
 For high-value sites, I pair Wordfence with [Cloudflare's WAF ↗](https://www.cloudflare.com/application-services/products/waf/). Wordfence catches WordPress-specific threats at the application level. Cloudflare blocks attacks at the edge before they reach the server. Defense in depth.
 
