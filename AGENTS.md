@@ -183,7 +183,11 @@ The render hook at `layouts/_default/_markup/render-link.html` automatically add
 
 ## Git Workflow
 
-**NEVER commit directly to main.** Always use branches and PRs.
+- **NEVER commit directly to main for code changes.** Always use branches and PRs. 
+- Commiting to main for content changes is OK.
+
+## Git Commit Messages
+- **Always use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification)** - A specification for adding human and machine readable meaning to commit messages
 
 Branch naming:
 - `feature/` - New functionality
