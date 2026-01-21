@@ -187,7 +187,8 @@ The render hook at `layouts/_default/_markup/render-link.html` automatically add
 - Commiting to main for content changes is OK.
 
 ## Git Commit Messages
-- **Always use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification)** - A specification for adding human and machine readable meaning to commit messages. If adding/updating blog content, start the commit message with "content: "
+- **Always use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification)** 
+- **IMPORTANT:** If adding/updating content, start the commit summary message with "content: " followed by the post or page title. Add details to the commit description. 
 
 Branch naming:
 - `feature/` - New functionality
