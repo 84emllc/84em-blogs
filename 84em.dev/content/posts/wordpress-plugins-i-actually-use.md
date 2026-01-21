@@ -13,6 +13,8 @@ WordPress's `wp_mail()` function is unreliable. Shared hosting providers throttl
 
 [FluentSMTP ↗](https://fluentsmtp.com/) routes email through actual mail services: SendGrid, Mailgun, Amazon SES, or any SMTP server you control. Configure it once, forget about it. Email logging shows exactly what was sent and when, which matters when a client asks "did that password reset email go out?"
 
+Bonus points for the ability to configure multiple email services with fallback redundancy. I use my Google Workspace email as my primary and Brevo's free plan for my backup. 
+
 ## Relevanssi
 
 WordPress's built-in search is a database query against post titles and content. It doesn't understand synonyms. It can't weight results by relevance. It breaks on large sites.
