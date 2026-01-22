@@ -876,6 +876,41 @@ main {
   font-weight: 500;
 }
 
+/* More from 84EM */
+.more-from-84em {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--color-code-bg);
+  border-radius: 8px;
+}
+
+.more-from-84em h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: var(--color-text);
+}
+
+.more-from-84em p {
+  font-size: 0.9375rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text-muted);
+}
+
+.more-from-84em p:last-child {
+  margin-bottom: 0;
+}
+
+.more-from-84em a {
+  color: var(--color-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.more-from-84em a:hover {
+  text-decoration: underline;
+}
+
 /* Related Posts */
 .related-posts {
   margin-top: 3rem;
