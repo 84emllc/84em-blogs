@@ -743,7 +743,7 @@ main {
   border-radius: 6px;
   text-decoration: none;
   color: #9ff400;
-  background: var(--color-code-bg);
+  background: #000;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
@@ -766,7 +766,7 @@ main {
   cursor: pointer;
   font-family: inherit;
   color: #9ff400;
-  background: var(--color-code-bg);
+  background: #000;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
@@ -839,7 +839,7 @@ main {
   border-radius: 6px;
   text-decoration: none;
   color: #9ff400;
-  background: var(--color-code-bg);
+  background: #000;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
