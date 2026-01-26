@@ -10,9 +10,9 @@ I've been playing music since I could walk and writing my own songs since I was 
 
 In the 80s, MIDI and synthesizers were supposed to eliminate musicians. Samplers could reproduce any instrument. Drum machines kept perfect time. Why would anyone need a band?
 
-What actually happened: the tools became instruments. New genres emerged. Electronic, industrial, hip-hop production techniques that couldn't have existed otherwise. Musicians who adapted found territory that didn't exist before. The ones who insisted the old ways were the only legitimate ways got left behind.
+What actually happened: the tools became instruments. New genres emerged. Electronic, industrial, hip-hop production techniques that couldn't have existed otherwise. Musicians who adapted found territory that didn't exist before.
 
-But acoustic guitars didn't become obsolete. Neither did drummers. They coexist with programmed beats and synthetic textures. Most interesting music now uses both.
+But guitars didn't become obsolete. Neither did drummers. They coexist with programmed beats and synthetic textures. The most interesting music to me now uses both.
 
 ## The Part That's Actually Worth Worrying About
 
@@ -26,9 +26,9 @@ If AI handles all of that, what's the new entry point? Where do people develop t
 
 ## What I Think Happens Next
 
-AI tools aren't going away, and they're getting better. Fighting that is pointless. The developers who adapt will find new territory. Probably work that requires understanding business context, legacy system knowledge, and the kind of judgment calls AI can't make.
+AI tools aren't going away, and they're getting better. Fighting that is pointless. The developers who adapt will find new territory. Work that requires understanding business context, legacy system knowledge, and the kind of judgment calls AI can't make.
 
-The frameworks and languages will probably keep evolving too. AI might accelerate that rather than prevent it. Tools optimized for AI-assisted development, languages that make intent clearer, patterns that emerge from how humans and AI collaborate.
+The frameworks and languages will keep evolving too. AI might accelerate that rather than prevent it. Tools optimized for AI-assisted development, languages that make intent clearer, patterns that emerge from how humans and AI collaborate.
 
 But we need to figure out the pipeline problem. Synthesizers democratized music production without eliminating the need to understand music. We need AI-assisted development to work the same way. Lowering barriers without removing the requirement to actually understand what you're building.
 
