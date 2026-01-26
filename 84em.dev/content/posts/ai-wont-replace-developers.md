@@ -6,7 +6,7 @@ description: "The real concern isn't AI taking developer jobs. It's what happens
 tags: ["ai", "career", "opinion"]
 ---
 
-I've been playing music since I could walk and writing my own songs since I was a teenager. I've been writing code since 1995. Now I'm in my 50s, and I've watched both industries go through multiple rounds of "this technology will replace humans."
+I've been playing music since I could walk and writing my own songs since I was a teenager. I've been writing code since I was a teenager. Professionally, since 1995. Now I'm in my 50s, and I've watched both industries go through multiple rounds of "this technology will replace humans."
 
 In the 80s, MIDI and synthesizers were supposed to eliminate musicians. Samplers could reproduce any instrument. Drum machines kept perfect time. Why would anyone need a band?
 
