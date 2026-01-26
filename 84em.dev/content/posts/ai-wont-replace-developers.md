@@ -1,5 +1,6 @@
 ---
 title: "AI Won't Replace Developers. But It Might Break the Pipeline That Creates Them."
+slug: "ai-wont-replace-developers"
 date: 2026-01-26
 description: "The real concern isn't AI taking developer jobs. It's what happens when the entry-level work that teaches fundamentals gets automated away."
 tags: ["ai", "career", "opinion"]
