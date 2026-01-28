@@ -8,14 +8,11 @@
     {{- end }}
   </header>
 
-  {{- $pages := .Pages -}}
-  {{- if .IsHome -}}
-    {{- $pages = where site.RegularPages "Section" "posts" -}}
-  {{- end -}}
+  {{- $paginator := .Paginate (.Pages.ByDate.Reverse) -}}
 
-  {{- if $pages -}}
+  {{- if $paginator.Pages -}}
   <ul class="post-list">
-    {{- range $pages.ByDate.Reverse -}}
+    {{- range $paginator.Pages -}}
     <li class="post-item">
       <article>
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
