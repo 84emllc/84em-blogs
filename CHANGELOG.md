@@ -15,6 +15,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Standardized paragraph and h4-h6 font size to 1.2rem
 - Removed inconsistent font-size overrides from .intro, .post-list-compact, and .more-from-84em
 
+## [1.2.7] - 2026-01-28
+
+### Fixed
+
+- Pagination now works on posts listing pages (both sites)
+- Home page post list font sizes now match posts page for consistency
+
 ## [1.2.6] - 2026-01-20
 
 ### Changed
