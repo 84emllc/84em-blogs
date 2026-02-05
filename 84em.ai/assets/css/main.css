@@ -237,12 +237,13 @@ main {
   text-align: center;
   padding: var(--spacing);
   color: #fff;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .site-footer p {
   max-width: var(--max-width-wide);
   margin: 0 auto;
+  font-size: 14px;
 }
 
 .site-footer a {
