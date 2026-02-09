@@ -53,6 +53,14 @@ Release tracking connects errors to deployments, so I know which deploy introduc
 
 Server logs tell you something broke. Sentry tells you what, where, and why.
 
+## GitHub
+
+Private repos are free. [GitHub's ↗](https://github.com) paid features are where the value is.
+
+Actions minutes run automated tests and deployments on every push. Copilot handles repetitive code patterns so I can focus on the logic that matters. Advanced security scans for vulnerabilities and secrets before they reach production.
+
+Free-tier Actions minutes run out fast on active projects. Paid plans keep the pipeline running.
+
 ## New Relic
 
 Sentry catches errors. [New Relic ↗](https://newrelic.com) catches performance problems.
