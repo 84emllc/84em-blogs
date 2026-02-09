@@ -1,5 +1,5 @@
 ---
-title: "Services Worth Paying For"
+title: "The Subscriptions Behind Every Client Project"
 date: 2026-02-09
 description: "The paid services that make client work sustainable, and why free alternatives don't cut it."
 tags: ["tools", "services", "infrastructure", "business"]
