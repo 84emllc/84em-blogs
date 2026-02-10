@@ -2,7 +2,7 @@
 title: "The Subscriptions Behind Every Client Project"
 date: 2026-02-09
 description: "The paid services that make client work sustainable, and why free alternatives don't cut it."
-tags: ["tools", "services", "infrastructure", "business"]
+tags: ["tools", "services", "infrastructure", "business", "productivity"]
 ---
 
 I pay for services when the free version costs me more in time, risk, or client trust than the subscription price.

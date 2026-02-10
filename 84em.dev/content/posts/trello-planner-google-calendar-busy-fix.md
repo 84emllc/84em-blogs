@@ -3,7 +3,7 @@ title: "Trello Planner Doesn't Mark You as Busy in Google Calendar. Here's How t
 date: 2026-02-10
 slug: "trello-planner-google-calendar-busy-fix"
 description: "Trello Planner creates Focus Time events that don't block your calendar. A free Google Apps Script fixes it in five minutes."
-tags: ["trello", "google-calendar", "productivity"]
+tags: ["trello", "google-calendar", "productivity", "automation", "tools"]
 ---
 
 Trello's Planner feature lets you drag cards onto a calendar to block time for tasks. It syncs with Google Calendar, which sounds useful. The problem is how it syncs.

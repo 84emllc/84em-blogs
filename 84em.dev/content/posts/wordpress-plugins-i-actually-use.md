@@ -2,7 +2,7 @@
 title: "The WordPress Plugins I Actually Use"
 date: 2026-01-20
 description: "Eight plugins that solve real problems in client work, from email reliability to search performance."
-tags: ["wordpress", "plugins", "tools", "recommendations"]
+tags: ["wordpress", "plugins", "tools", "recommendations", "security"]
 ---
 
 Since I started specializing in WordPress development in 2012, I've installed, tried and tested hundreds of plugins. Most get uninstalled within a week. These nine stay.

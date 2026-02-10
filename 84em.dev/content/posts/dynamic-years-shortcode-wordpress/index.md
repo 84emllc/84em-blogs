@@ -2,7 +2,7 @@
 title: "Never Update \"Years of Experience\" Again: Dynamic Shortcodes in WordPress"
 date: 2026-01-08
 description: "How to replace hardcoded year references with shortcodes that calculate automatically, so your content stays current without manual updates."
-tags: ["wordpress", "automation", "content-management", "shortcodes"]
+tags: ["wordpress", "automation", "content-management", "shortcodes", "wp-cli"]
 ---
 
 Every year, I have the same task on 84em.com --- find years of experiences references and update them. e.g., "13 years of WordPress experience", "30 years of experience in the industry", etc. Across 60+ pages it's easy to miss a few.

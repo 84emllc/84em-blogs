@@ -3,7 +3,7 @@ title: "Building a High-Performance Directory with Headless WordPress and Hugo"
 slug: "headless-wordpress-hugo-directory"
 date: 2026-02-04
 description: "How to combine WordPress as a headless CMS with Hugo for static frontend generation, featuring magic link authentication, Cloudflare image uploads, and Meilisearch."
-tags: ["wordpress", "hugo", "headless-cms", "static-sites", "api"]
+tags: ["wordpress", "hugo", "headless-cms", "static-sites", "api", "performance"]
 ---
 
 Directory websites have conflicting requirements. Administrators need a familiar content management interface. Visitors need fast page loads. Store owners need an easy way to submit and update their listings.
