@@ -2,7 +2,7 @@
 title: "Automating Client Documentation with AI: A Practical Workflow"
 date: 2025-12-29
 description: "Turn documentation from a dreaded chore into a 30-minute task using AI-assisted workflows."
-tags: ["ai", "workflow", "documentation"]
+tags: ["ai", "workflow", "documentation", "automation"]
 ---
 
 Nobody loves writing documentation. It's one of those tasks that always gets pushed to the end of a project, squeezed in right before handoff, and takes longer than it should.

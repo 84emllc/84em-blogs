@@ -3,7 +3,7 @@ title: "Debugging Production Errors Without Leaving the Terminal"
 slug: "sentry-mcp-error-investigation"
 date: 2025-12-19
 description: "Using Claude Code with the Sentry MCP to investigate site errors without logging into dashboards"
-tags: ["claude-code", "mcp", "sentry", "workflow"]
+tags: ["claude-code", "mcp", "sentry", "workflow", "debugging"]
 ---
 
 I use [Sentry ↗](https://sentry.io) to monitor site errors on 84em.com. When something breaks, I get a Slack notification and can dig into the stack trace, affected URLs, and error frequency.

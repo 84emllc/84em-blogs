@@ -2,7 +2,7 @@
 title: "Backfilling Git Release History: Adding Tags and a Changelog to an Existing Repo"
 date: 2026-01-07
 description: "How to use AI to retroactively add semantic version tags and a proper changelog to a project that shipped without them."
-tags: ["ai", "git", "workflow", "versioning"]
+tags: ["ai", "git", "workflow", "versioning", "automation", "claude-code"]
 ---
 
 You inherited a project. Or maybe you built it yourself back when "just push to main" felt like enough process. Either way, you're staring at a repo with dozens, hundreds, or even thousands of commits, no version tags, and no changelog. The git log is your only record of what changed and when.

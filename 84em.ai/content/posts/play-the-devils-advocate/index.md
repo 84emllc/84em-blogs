@@ -2,7 +2,7 @@
 title: "4 Magic Words for AI: Play the Devil's Advocate"
 date: 2025-12-22
 description: "Stop using AI to confirm what you already think. Ask it to argue against you instead."
-tags: ["prompting", "workflow"]
+tags: ["ai", "prompting", "workflow"]
 ---
 
 Most people use AI to confirm what they already think. That's backwards.

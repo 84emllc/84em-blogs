@@ -3,7 +3,7 @@ title: "From MVP to Production: Iterating with Claude Code"
 slug: "uptimerobot-tool-evolution"
 date: 2025-12-20
 description: "How a 7-minute MVP evolved into a full-featured UptimeRobot management tool through iterative AI-assisted development"
-tags: ["claude-code", "ai", "workflow"]
+tags: ["claude-code", "ai", "workflow", "automation"]
 ---
 
 In my [previous post](/posts/claude-code-plan-mode/), I built an MVP for managing UptimeRobot monitors in 7 minutes using Claude Code's Plan Mode. It could pause and delete monitors. Useful, but minimal.
