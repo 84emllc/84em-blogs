@@ -123,6 +123,17 @@ Simple markdown file: `content/posts/your-post-slug.md`
 | Web development, WordPress, PHP, JavaScript, performance, hosting | 84em.dev |
 | Overlap (e.g., using AI to build a WordPress feature) | Primary on one, cross-link from other |
 
+### Tagging
+
+When adding a new post, tags must be appropriate for the post content AND consistent with existing tags across all posts on that site. Before finalizing tags on a new post:
+
+1. Read the front matter of all existing posts in the site's `content/posts/` directory
+2. Collect every tag currently in use
+3. Reuse existing tags where they fit the new post's content (prefer existing tags over inventing new ones)
+4. Check whether any existing posts should gain a tag introduced by the new post to strengthen grouping
+5. Suggest tag additions to existing posts when the connection is clear and logical
+6. Do not over-tag. Each tag should reflect a genuine theme of the post, not a passing mention.
+
 ### Cross-Linking
 
 When a post spans both domains, publish the primary version on the most relevant site and add a cross-link on the other. Example:
